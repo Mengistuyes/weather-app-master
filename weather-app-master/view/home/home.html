@@ -1,0 +1,12 @@
+<div class="home-wrapper">
+	<div class="weather-detail-wrapper">
+		<div class="place-wrapper">Today's weather in: {{location.city}}, {{location.country}}</div>
+		<div>The temperature is: {{(weatherInfo.main.temp *(9/5)-459.67).toFixed(1)}} &#8457;</div>
+		<div>Description: {{weather.description}}</div>
+		<div>
+			<img ng-if="weather.icon" ng-src='http://openweathermap.org/img/w/{{weather.icon}}.png' alt='Weather icon.'>
+		</div>
+	</div>
+</div>
+
+

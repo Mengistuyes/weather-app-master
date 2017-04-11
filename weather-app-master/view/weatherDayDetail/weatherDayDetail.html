@@ -1,0 +1,39 @@
+<div class="home-wrapper">
+	<div>{{location.city}},{{location.country}}</div>
+	<div class="weather-detail-wrapper">
+
+	<table style="width:100%">
+		<tr>
+			<th>Header</th>
+			<th>Description</th>
+		</tr>
+		<tr>
+			<td>Temperature</td>
+			<td>{{(weatherInfo.main.temp *(9/5)-459.67).toFixed(1)}} &#8457;</td>
+		</tr>
+
+		<tr>
+			<td>Weather Description</td>
+			<td>{{weatherInfo.weather[0].description}}</td>
+		</tr>
+
+		<tr>
+			<td>Sunrise</td>
+			<td>{{weatherInfo.sys.sunrise}}</td>
+		</tr>
+
+		<tr>
+			<td>Sunset</td>
+			<td>{{weatherInfo.sys.sunset}}</td>
+		</tr>
+
+		<tr>
+			<td>Humidity</td>
+			<td>{{weatherInfo.main.humidity}}</td>
+		</tr>
+
+	</table>
+	</div>
+</div>
+
+

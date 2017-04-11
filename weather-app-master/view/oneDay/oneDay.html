@@ -1,0 +1,22 @@
+<div class="five-day-wrapper">
+	<div class="items-wrapper">
+		<div>
+			<a class="link-wrapper table-header">
+				<div class="item-wrapper cell-width">Hour</div>
+				<div class="item-wrapper cell-width">Temperature</div>
+				<div class="item-wrapper">Description</div>
+				<div class="item-wrapper">Icon</div>
+			</a>
+		</div>
+		<div data-ng-repeat="item in weatherInfoList">
+			<a class="link-wrapper" href="#/5day/{{day}}/{{$index}}">
+				<div class="item-wrapper"><date-format item="item"></date-format></div>
+				<div class="item-wrapper">{{(item.main.temp *(9/5)-459.67).toFixed(1)}} &#8457;</div>
+				<div class="item-wrapper">{{item.weather[0].description}}</div>
+				<div class="item-wrapper">
+					<img ng-if="item.weather[0].icon" ng-src='http://openweathermap.org/img/w/{{item.weather[0].icon}}.png' alt='Weather icon.'>
+				</div>
+			</a>
+		</div>
+	</div>
+</div>

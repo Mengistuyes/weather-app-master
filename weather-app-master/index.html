@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="myApp">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <title>NETE solutions weather informer</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div class="header">
+    <div class="logo" alt='Company Logo'></div>
+    <div class="header-title">NETE solutions weather informer</div>
+</div>
+<div class="menu-bar">
+    <a class="menu-link" href="#/home">Today forecast</a>
+    <a class="menu-link" href="#/5day">5 days forecast</a>
+</div>
+</div>
+<div class="main-view">
+    <div data-ng-view class="content-view"></div>
+</div>
+
+<script src="node_modules/angular/angular.js"></script>
+<script src="node_modules/angular-route/angular-route.js"></script>
+<script src="js/app.js"></script>
+<script src="js/routes.js"></script>
+<script src="js/dataStorageService.js"></script>
+<script src="js/ajaxService.js"></script>
+<script src="view/home/home-controller.js"></script>
+<script src="view/5day/5day-controller.js"></script>
+<script src="view/dateFormat/dateFormat.js"></script>
+<script src="view/oneDay/oneDay-controller.js"></script>
+<script src="view/weatherDayDetail/weatherDayDetail-controller.js"></script>
+</body>
+</html>
